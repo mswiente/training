@@ -31,6 +31,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
+  count = "2"
   ami = "ami-8328bbf0"
   instance_type = "t2.micro"
   
